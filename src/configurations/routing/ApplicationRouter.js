@@ -49,6 +49,7 @@ const UnauthenticatedRoute = ({ children, ...rest }) => (
 );
 
 const allappRoutes = getAllRoutesArray();
+console.log(isAuthenticated());
 
 const routes = allappRoutes.map((route, index) => {
   const { component: Component } = route;

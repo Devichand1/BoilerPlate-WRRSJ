@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import HomeContainer from '../../components/Home/Home.Container';
+import RegisterContainer from '../../components/register/Register.Container';
 
 const LoginContainer = React.lazy(() =>
   import(
@@ -10,7 +12,7 @@ const appRoutes = {
   root: {
     defaultRoute: {
       path: '/',
-      component: LoginContainer,
+      component: HomeContainer,
       needAuth: true,
       exact: true,
     },
@@ -19,6 +21,12 @@ const appRoutes = {
     login: {
       path: '/login',
       component: LoginContainer,
+      needAuth: false,
+      exact: false,
+    },
+    register: {
+      path: '/register',
+      component: RegisterContainer,
       needAuth: false,
       exact: false,
     },

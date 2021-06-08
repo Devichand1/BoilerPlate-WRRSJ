@@ -1,9 +1,8 @@
 import {
-  LOGIN_INIT,
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-  LOGOUT,
-} from './Login.constants';
+  REGISTER_FAILURE,
+  REGISTER_INIT,
+  REGISTER_SUCCESS,
+} from './Register.constants';
 
 const DEFAULT_STATE = {
   loading: false,
@@ -20,11 +19,11 @@ const transformErrors = data => {
   return [...data];
 };
 
-const LoginReducer = (state = DEFAULT_STATE, action) => {
+const RegisterReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
-    case LOGIN_INIT:
+    case REGISTER_INIT:
       return { ...state, loading: true };
-    case LOGIN_SUCCESS: {
+    case REGISTER_SUCCESS: {
       const userData = transformAndStoreLogingData(action.payload);
       window.localStorage.setItem('authenticated', true);
       return {
@@ -35,23 +34,13 @@ const LoginReducer = (state = DEFAULT_STATE, action) => {
         data: userData,
       };
     }
-    case LOGIN_FAILURE: {
+    case REGISTER_FAILURE: {
       const errors = transformErrors(action.payload);
       return { ...state, loading: false, data: {}, errors };
-    }
-    case LOGOUT: {
-      window.localStorage.setItem('authenticated', false);
-      return {
-        ...state,
-        authenticate: false,
-        errors: [],
-        data: {},
-        loading: false,
-      };
     }
     default:
       return state;
   }
 };
 
-export default LoginReducer;
+export default RegisterReducer;

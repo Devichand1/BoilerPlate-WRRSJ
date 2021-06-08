@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "firstname": "Devichand",
+      "lastname": "Inkhiya",
+      "age": 21,
+      "email": "dev@dev.dev",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "firstname": "fnew",
+      "lastname": "lnew",
+      "age": 22,
+      "email": "devi@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "firstname": "demo",
+      "lastname": "demo",
+      "age": 123,
+      "email": "dev@dev.dev",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "firstname": "asdasd",
+      "lastname": "asdasdas",
+      "age": 12,
+      "email": "asdasd@asdas.com",
+      "password": "121212121",
+      "id": 4
+    }
+  ]
+}

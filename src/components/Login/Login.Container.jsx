@@ -7,8 +7,8 @@ import { performLogin } from './Login.actions';
 
 class LoginContainer extends PureComponent {
   componentDidMount() {
-    const { actions } = this.props;
-    actions.login({ email: 'ankit@gmail.com', password: 'password' });
+    // const { actions } = this.props;
+    // actions.login({ email: 'ankit@gmail.com', password: 'password' });
   }
 
   render() {
@@ -28,6 +28,7 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(LoginContainer),
-);
+// export default withRouter(
+//   connect(mapStateToProps, mapDispatchToProps)(LoginContainer),
+// );
+export default LoginContainer;
