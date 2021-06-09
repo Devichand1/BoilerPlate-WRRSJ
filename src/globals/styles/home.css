@@ -2,12 +2,15 @@
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  align-items: center;
   flex-direction: column;
 }
 .home-container {
   background-color: antiquewhite;
   padding: 20px;
   flex: 1;
+  align-items: center;
   text-align: center;
   border-radius: 20px;
 }
@@ -27,8 +30,70 @@
   background: linear-gradient(90deg, #000 50%, #0000 0) right/200% 100%;
   color: rgb(241, 143, 13);
 }
+.file-input {
+  background-color: rgba(211, 211, 211, 0.521);
+  border: 1px dotted gray;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.dragover {
+  background-color: rgba(211, 211, 211, 0.938);
+}
+.file-input .MuiSvgIcon-root {
+  font-size: 3rem;
+  color: rgb(10, 173, 10);
+}
+.upload-comp {
+  background-color: white;
+  padding: 3rem;
+  width: 30rem;
+  border-radius: 20px;
+}
+.uploadimg-list > div {
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.623);
+  border-radius: 10px;
+
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin: 0.5rem 0rem;
+  align-items: center;
+}
+.uploadimg-list .imgdata {
+  display: flex;
+
+  color: gray;
+  font-size: 0.9rem;
+  align-items: center;
+}
+.ant-upload.ant-upload-drag .ant-upload-btn {
+  padding: 1rem;
+}
+.uploadimg-list img {
+  width: 3rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+.imgdlt-btn {
+  cursor: pointer;
+}
+.imgdlt-btn .MuiSvgIcon-root {
+  color: red;
+  font-size: 1.5rem;
+}
+.imgdlt-btn .MuiIconButton-root {
+  padding: 0rem;
+}
 @media only screen and (max-width: 600px) {
   .home-container {
     flex: 0.9;
+  }
+  .upload-comp {
+    width: auto;
+    padding: 1rem;
   }
 }
